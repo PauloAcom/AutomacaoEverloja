@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.7 on win32)" generated="2026-09-25T17:56:34.423971" rpa="false" schemaversion="5">
+<suite id="s1" name="CT02 LOGIN USUÁRIO INVÁLIDO" source="C:\Users\paulo.gomes\OneDrive - ACOM SISTEMAS CORPORATIVOS LTDA\Documentos\ROBOT Automation\EVERLOJA\TESTES\LOGIN\CT02_LOGIN_USUÁRIO_INVÁLIDO.robot">
+<test id="s1-t1" name="CT02 - Login Everloja - Usuário inválido" line="5">
+<kw name="Given Usuário Acessa o Portal Everloja" owner="LOGIN_KEYWORD">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-25T17:56:34.970998" level="INFO">Opening browser 'Chrome' to base url 'https://homolog.everloja.net.br/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-25T17:56:34.970490" elapsed="5.646016"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[text()='Portal da Loja']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-25T17:56:40.618019" elapsed="0.482211"/>
+</kw>
+<status status="PASS" start="2026-09-25T17:56:34.969023" elapsed="6.131625"/>
+</kw>
+<kw name="And Usuário Preenche informações de login inválidas" owner="LOGIN_KEYWORD">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T17:56:41.103611" level="INFO">Typing text '2019002' into text field 'xpath=//input[@id='entidade']'.</msg>
+<arg>xpath=//input[@id='entidade']</arg>
+<arg>${entidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T17:56:41.102993" elapsed="0.333024"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T17:56:41.437337" level="INFO">Typing text 'usuarioInvalido' into text field 'xpath=//input[@id='login']'.</msg>
+<arg>xpath=//input[@id='login']</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T17:56:41.436563" elapsed="0.322505"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T17:56:41.760840" level="INFO">Typing text 'everfs' into text field 'xpath=//input[@id='senha']'.</msg>
+<arg>xpath=//input[@id='senha']</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T17:56:41.759852" elapsed="0.203132"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-25T17:56:41.964206" level="INFO">Clicking button 'xpath=(//button[@type='button'])[3]'.</msg>
+<arg>xpath=(//button[@type='button'])[3]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T17:56:41.963421" elapsed="0.201388"/>
+</kw>
+<arg>usuarioInvalido</arg>
+<status status="PASS" start="2026-09-25T17:56:41.101979" elapsed="1.063187"/>
+</kw>
+<kw name="Then Usuário recebe mensagem de erro sobre login inválido" owner="LOGIN_KEYWORD">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Usuário não encontrado</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-09-25T17:56:42.167018" elapsed="0.436569"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-25T17:56:42.852319" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Usu%C3%A1rio%20n%C3%A3o%20encontrado"&gt;&lt;img src="Usu%C3%A1rio%20n%C3%A3o%20encontrado" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-09-25T17:56:42.852456" level="INFO">C:\Users\paulo.gomes\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\remote\webdriver.py:889: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn(</msg>
+<arg>Usuário não encontrado</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-25T17:56:42.604160" elapsed="0.248513"/>
+</kw>
+<status status="PASS" start="2026-09-25T17:56:42.166236" elapsed="0.686608"/>
+</kw>
+<doc>Teste criado para validação de login com usuário inválido</doc>
+<status status="PASS" start="2026-09-25T17:56:34.968073" elapsed="7.885116"/>
+</test>
+<status status="PASS" start="2026-09-25T17:56:34.448931" elapsed="8.405355"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="CT02 LOGIN USUÁRIO INVÁLIDO" id="s1" pass="1" fail="0" skip="0">CT02 LOGIN USUÁRIO INVÁLIDO</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

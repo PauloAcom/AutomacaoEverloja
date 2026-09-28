@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.7 on win32)" generated="2026-09-26T01:42:41.935600" rpa="false" schemaversion="5">
+<suite id="s1" name="LANÇAMENTO RMI" source="C:\Users\paulo.gomes\OneDrive - ACOM SISTEMAS CORPORATIVOS LTDA\Documentos\ROBOT Automation\EVERLOJA\TESTES\LANÇAMENTOS\RMI\LANÇAMENTO_RMI.robot">
+<test id="s1-t1" name="CT01 - Lançamento de RMI" line="5">
+<kw name="Given Usuário Logou no Everloja" owner="GENERAL_KEYWORDS">
+<kw name="Usuário Acessa o Portal Everloja" owner="GENERAL_KEYWORDS">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:42:42.625111" level="INFO">Opening browser 'Chrome' to base url 'https://homolog.everloja.net.br/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-26T01:42:42.624845" elapsed="7.029420"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[text()='Portal da Loja']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-26T01:42:49.654996" elapsed="0.678441"/>
+</kw>
+<status status="PASS" start="2026-09-26T01:42:42.623967" elapsed="7.710092"/>
+</kw>
+<kw name="Usuário Preenche informações de Login" owner="GENERAL_KEYWORDS">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:42:50.337352" level="INFO">Typing text '2019002' into text field 'xpath=//input[@id='entidade']'.</msg>
+<arg>xpath=//input[@id='entidade']</arg>
+<arg>${entidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-26T01:42:50.336477" elapsed="0.256645"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:42:50.594509" level="INFO">Typing text 'ADMIN' into text field 'xpath=//input[@id='login']'.</msg>
+<arg>xpath=//input[@id='login']</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-26T01:42:50.593603" elapsed="0.179794"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:42:50.774656" level="INFO">Typing text 'everfs' into text field 'xpath=//input[@id='senha']'.</msg>
+<arg>xpath=//input[@id='senha']</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-26T01:42:50.773884" elapsed="0.192931"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:42:51.092223" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Informa%C3%A7%C3%B5es%20de%20login%20preenchidos"&gt;&lt;img src="Informa%C3%A7%C3%B5es%20de%20login%20preenchidos" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-09-26T01:42:51.092625" level="INFO">C:\Users\paulo.gomes\AppData\Local\Programs\Python\Python314\Lib\site-packages\selenium\webdriver\remote\webdriver.py:889: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  warnings.warn(</msg>
+<arg>Informações de login preenchidos</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-26T01:42:50.967853" elapsed="0.125449"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:42:51.094966" level="INFO">Clicking button 'xpath=(//button[@type='button'])[3]'.</msg>
+<arg>xpath=(//button[@type='button'])[3]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-26T01:42:51.094134" elapsed="0.164026"/>
+</kw>
+<status status="PASS" start="2026-09-26T01:42:50.334996" elapsed="0.923887"/>
+</kw>
+<kw name="Usuário Acessa o Dashboard do Everloja" owner="GENERAL_KEYWORDS">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-09-26T01:43:01.263573" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-09-26T01:42:51.261576" elapsed="10.002659"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//img[@alt='Logo']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-26T01:43:01.265405" elapsed="0.050416"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:43:01.459146" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Usu%C3%A1rio%20chegou%20no%20Dashboard%20do%20EverLoja"&gt;&lt;img src="Usu%C3%A1rio%20chegou%20no%20Dashboard%20do%20EverLoja" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Usuário chegou no Dashboard do EverLoja</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-26T01:43:01.316434" elapsed="0.143148"/>
+</kw>
+<status status="PASS" start="2026-09-26T01:42:51.260274" elapsed="10.199707"/>
+</kw>
+<status status="PASS" start="2026-09-26T01:42:42.623493" elapsed="18.836652"/>
+</kw>
+<kw name="And Usuário Acessa o Menu" owner="RMI_CONFIG">
+<kw name="Acessar menu" owner="GENERAL_KEYWORDS">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:43:01.464352" level="INFO">Clicking element '//div[@role='button' and @aria-label='Suprimentos']'.</msg>
+<arg>//div[@role='button' and @aria-label='${menu}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-26T01:43:01.463631" elapsed="0.644736"/>
+</kw>
+<arg>${menu}</arg>
+<status status="PASS" start="2026-09-26T01:43:01.462750" elapsed="0.646032"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:43:02.138542" level="INFO">Current page contains text '615 - Suprimentos'.</msg>
+<arg>text=615 - Suprimentos</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-09-26T01:43:02.109424" elapsed="0.029625"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-09-26T01:43:02.464877" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Usu%C3%A1rio%20acessou%20menu%20Suprimentos"&gt;&lt;img src="Usu%C3%A1rio%20acessou%20menu%20Suprimentos" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>Usuário acessou menu Suprimentos</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-09-26T01:43:02.140383" elapsed="0.325035"/>
+</kw>
+<arg>Suprimentos</arg>
+<status status="PASS" start="2026-09-26T01:43:01.461707" elapsed="1.004117"/>
+</kw>
+<status status="PASS" start="2026-09-26T01:42:42.622340" elapsed="19.844342"/>
+</test>
+<status status="PASS" start="2026-09-26T01:42:41.978694" elapsed="20.490538"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LANÇAMENTO RMI" id="s1" pass="1" fail="0" skip="0">LANÇAMENTO RMI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
