@@ -33,3 +33,15 @@ Usuário recebe mensagem de erro sobre login inválido
 Acessar menu
     [Arguments]    ${menu}
     Click Element    //div[@role='button' and @aria-label='${menu}']
+
+Selecionar opção do campo
+    [Arguments]    ${campo}    ${valor}
+    Click Element    xpath=//p[text()='${campo}']/following::input[1]
+    Sleep    5s
+    Click Element    xpath=//li[contains(., '${valor}')]
+
+Popular Campo
+    [Arguments]    ${campo}    ${valor}
+    Click Element    xpath=//p[text()='${campo}']/following::input[1]
+    Sleep    5s
+    Input Text    xpath=//p[text()='${campo}']/following::input[1]    ${valor}
