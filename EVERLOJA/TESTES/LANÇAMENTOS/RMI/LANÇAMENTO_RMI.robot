@@ -5,4 +5,4 @@ Resource    RMI_CONFIG.resource
 CT01 - Lançamento de RMI
     Given Usuário Logou no Everloja
     And Usuário Acessa o Menu    Suprimentos
-    
+    And Usuário Busca Item

@@ -12,3 +12,6 @@ Usuário Logou no Everloja
     Usuário Acessa o Portal Everloja
     Usuário Preenche informações de Login
     Usuário Acessa o Dashboard do Everloja
+
+Usuário Busca Item
+    Select From List By Value    Empresa    2 - EMPRESA 2
