@@ -36,12 +36,24 @@ Acessar menu
 
 Selecionar opção do campo
     [Arguments]    ${campo}    ${valor}
+    #Click Element    xpath=//p[text()='${campo}']/following::input[1]
+    #Sleep    5s
+    #Click Element    xpath=//li[contains(., '${valor}')]
     Click Element    xpath=//p[text()='${campo}']/following::input[1]
-    Sleep    5s
+    Wait Until Element Is Visible    xpath=//li[contains(., '${valor}')]    10s
     Click Element    xpath=//li[contains(., '${valor}')]
+    Sleep    1s
 
 Popular Campo
     [Arguments]    ${campo}    ${valor}
+    #Click Element    xpath=//p[text()='${campo}']/following::input[1]
+    #Sleep    5s
+    #Input Text    xpath=//p[text()='${campo}']/following::input[1]    ${valor}
+    #Wait Until Element Is Visible    xpath=//li[contains(., '103732')]    10s
+    #Click Element    xpath=//li[contains(., '103732')]
+
+    #Wait Until Element Is Visible    xpath=//button[contains(., 'Buscar')]    10s
+    #Click Element    xpath=//button[contains(., 'Buscar')]
     Click Element    xpath=//p[text()='${campo}']/following::input[1]
-    Sleep    5s
     Input Text    xpath=//p[text()='${campo}']/following::input[1]    ${valor}
+    Sleep    2s
