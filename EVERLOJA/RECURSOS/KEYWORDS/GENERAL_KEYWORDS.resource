@@ -4,7 +4,7 @@ Resource    ../VARIAVEIS/LOGIN_VARIAVEL.resource
 
 *** Keywords ***
 Usuário Acessa o Portal Everloja
-    Open Browser    ${url}    Chrome
+    Open Browser    ${url}    Chrome    options=add_argument("--start-maximized")
     Wait Until Element Is Visible    xpath=//*[text()='Portal da Loja']
 
 Usuário Preenche informações de Login
