@@ -45,3 +45,5 @@ Popular Campo
     Click Element    xpath=//p[text()='${campo}']/following::input[1]
     Sleep    5s
     Input Text    xpath=//p[text()='${campo}']/following::input[1]    ${valor}
+    Select Checkbox    //div[text()='103732']/preceding::input[@type='checkbox'][1]
+
