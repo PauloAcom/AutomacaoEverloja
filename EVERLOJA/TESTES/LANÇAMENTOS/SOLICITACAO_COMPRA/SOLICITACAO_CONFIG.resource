@@ -13,10 +13,13 @@ Usuário Logou no Everloja
     Usuário Preenche informações de Login
     Usuário Acessa o Dashboard do Everloja
 
-Usuário Busca Item           
-    Selecionar opção do campo    Empresa    2 - EMPRESA 2    
-    Selecionar opção do campo    Depósito    1 - ESTOQUE
-    Popular campo    Item    103732
+Usuário Seleciona Opção do Campo           
+    [Arguments]    ${campo}    ${valor}
+    Selecionar opção do campo    ${campo}    ${valor}    
+
+Usuário Seleciona Opção Item
+    [Arguments]   ${campo}    ${valor} 
+    Popular campo    ${campo}    ${valor} 
     
     
 
