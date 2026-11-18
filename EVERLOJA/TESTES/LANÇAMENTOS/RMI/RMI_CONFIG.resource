@@ -14,4 +14,7 @@ Usuário Logou no Everloja
     Usuário Acessa o Dashboard do Everloja
 
 Usuário Busca Item
-    Select From List By Value    Empresa    2 - EMPRESA 2
+    Seleciona registro em campo    Empresa    2 - EMPRESA 2
+    Seleciona registro em campo    Depósito    1 - ESTOQUE
+    Popular Campo    Item    1000000
+

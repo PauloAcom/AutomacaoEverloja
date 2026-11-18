@@ -8,3 +8,4 @@ CT01 - Login Everloja - Usuário Válido
     Given Usuário Acessa o Portal Everloja
     And Usuário Preenche informações de Login
     Then Usuário Acessa o Dashboard do Everloja
+    [Teardown]    Close Browser

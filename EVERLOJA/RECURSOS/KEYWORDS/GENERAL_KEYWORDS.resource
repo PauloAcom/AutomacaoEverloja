@@ -48,15 +48,21 @@ Popular Campo
     Wait Until Element Is Visible    xpath=//li[contains(., '${valor}')]    10s
     Click Element    xpath=//li[contains(., '${valor}')]
 
+Seleciona registro em campo
+    [Arguments]    ${campo}    ${valor}
+    Click Element    //p[text()='${campo}']/following::button[contains(@class,'MuiIconButton-edgeEnd')][1]
+    Wait Until Element Is Visible    xpath=//li[contains(., '${valor}')]    10s
+    Click Element    xpath=//li[contains(., '${valor}')]
+
 Usuário Clica no Botão
     [Arguments]    ${botao}
     Click Element    xpath=//button[contains(., '${botao}')]
 
+#103732
 Usuário Seleciona Item da Grid
     [Arguments]    ${item}
-    Wait Until Element Is Visible    xpath=//div[text()='103732']    10s
-    #Wait Until Element Is Visible    //div[text()='${item}']/preceding::input[@type='checkbox'][1]    10s
-    Select Checkbox    //div[text()='${item}']/preceding::input[@type='checkbox'][1]
+    Wait Until Element Is Visible    xpath=//div[@role='gridcell' and normalize-space()='${item}']    10s
+    Click Element    //div[@role='row'][.//div[@role='gridcell' and normalize-space()='${item}']]//input[@type='checkbox' and @name='select_row']
 
 Usuário Seleciona Todos os Itens
     Wait Until Element Is Visible    //input[@aria-label='Selecionar todas as linhas' and @type='checkbox']
